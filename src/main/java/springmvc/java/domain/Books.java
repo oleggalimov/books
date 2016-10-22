@@ -7,8 +7,9 @@ import javax.persistence.*;
  */
 @Entity
 @Table (name = "book")
-
+@NamedQuery(name = "Books.getAll", query = "Select b FROM Books b")
 public class Books {
+
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     @Column (name = "id", unique = true, nullable = false)

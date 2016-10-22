@@ -74,7 +74,7 @@ public class bookscontroller {
             Mv = new ModelAndView("bookBy","counts",0);
         }
         else if (!BOOK_IZDATEL.equals("") && !BOOK_AUTOR.equals("")) {
-            allBooksByAutor = bookservice.findByAutorAndIzdatelContaining(BOOK_AUTOR,BOOK_IZDATEL);
+            allBooksByAutor = bookservice.listAllBooks1(BOOK_AUTOR,BOOK_IZDATEL);
             Mv = new ModelAndView("bookBy", "listofbooks", allBooksByAutor);
             Mv.addObject("counts", allBooksByAutor.size());
         }

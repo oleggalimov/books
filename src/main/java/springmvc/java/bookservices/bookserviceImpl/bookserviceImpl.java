@@ -41,6 +41,16 @@ public class bookserviceImpl implements bookservice {
     }
 
     @Override
+    public List<Books> listAllBooks1(String name, String izdatel) {
+        return bookDAO.listAllBooks1(name,izdatel);
+    }
+
+
+    public List<Books> findAllBooks(String name, String izdatel) {
+        return bookDAO.listAllBooks1(name, izdatel);
+    }
+
+    @Override
     public Books findBookById(Long id) {
         return null;
     }

@@ -14,6 +14,8 @@ public interface bookservice  {
     List <Books> ListAllBooksByAUTOR (String BOOK_AUTOR);
     List <Books> ListAllBooksByIZDATEL (String BOOK_IZDATEL);
     List <Books> ListAllBooks ();
+
+    List<Books> listAllBooks1(String name, String izdatel);
     Books findBookById (Long id);
     List <Books> findByAutorAndIzdatelContaining (String Autor, String Izdatel);
 
